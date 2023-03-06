@@ -1,10 +1,13 @@
 #include<iostream>
 #include<stdio.h>
 #include "Node.cc"
+#include "CollectorList.cc"
 using namespace std;
 
 class List{
     Node* head;
+    CollectorList collector;
+
     public:
         List(){
             head = NULL;
@@ -12,7 +15,12 @@ class List{
 
         //insert at the beginnig of the list
         void insert(int data){
-            //star the new node
+            //check if the collector it's empty (if collector size equal 0 the function checkList return True)
+            if(collector.checkList()){
+                //create the node using malloc
+            }else{
+                //use the existing space 
+            }
             Node* newNode = new Node(data);
             newNode->next = head;
             head = newNode;

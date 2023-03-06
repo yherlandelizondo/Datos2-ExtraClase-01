@@ -1,17 +1,17 @@
 #include<iostream>
 #include<stdio.h>
 
-class collectorNode{
+class CollectorNode{
     public:
         int* memPtr;
-        collectorNode* next;
+        CollectorNode* next;
 
-        Node(){
+        CollectorNode(){
             memPtr = 0;
             next = NULL;
         }
-        Node(int data){
-            this->memPtr = data;
+        CollectorNode(int* ptr){
+            this->memPtr = ptr;
             this->next = NULL;
         }
 };
