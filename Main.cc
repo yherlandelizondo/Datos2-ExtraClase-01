@@ -6,7 +6,7 @@ using namespace std;
 int main(){
     List newList;
     int value = 0;
-
+    
     while(value != -1){
         cout << "\n";
         cout << "Ingrese -1 para salir." << "\n";
@@ -17,5 +17,6 @@ int main(){
         newList.printList();
         cout  << "\n" << "/////////////////////////////////////" << "\n";
     }
+    
 }
 
