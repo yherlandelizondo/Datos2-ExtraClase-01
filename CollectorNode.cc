@@ -3,15 +3,27 @@
 
 class CollectorNode{
     public:
-        int* memPtr;
+        void* memPtr;
         CollectorNode* next;
 
         CollectorNode(){
             memPtr = 0;
             next = NULL;
         }
-        CollectorNode(int* ptr){
+        CollectorNode(void* ptr){
             this->memPtr = ptr;
             this->next = NULL;
+        }
+        void setMemPtr(void* value){
+            memPtr = value;
+        }
+        void* getMemPtr(){
+            return memPtr;
+        }
+        void setNext(CollectorNode* ptr){
+            next = ptr;
+        }
+        CollectorNode* getNext(){
+            return next;
         }
 };
