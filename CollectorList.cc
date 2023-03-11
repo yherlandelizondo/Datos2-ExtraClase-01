@@ -32,6 +32,7 @@ class CollectorList{
             CollectorNode* temp = head;
             //check if the list it's empty.
             if(head == NULL){
+                cout << "\n";
                 cout << "Empty list" << "\n";
                 return;
             }
@@ -47,5 +48,7 @@ class CollectorList{
             if(size == 0){
                 return true;
             }
+            return false;
         } 
 };
+

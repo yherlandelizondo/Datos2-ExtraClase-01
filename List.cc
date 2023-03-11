@@ -7,10 +7,10 @@ using namespace std;
 CollectorList collector;
 
 void* operator new(size_t size){//Overloading the new class
-    cout << "State of if: " << collector.checkList() << "\n";
     if(collector.checkList()){ //check if the collector it's empty (if collector size equal 0 the function checkList return True)
         //create the node using malloc   
-        cout << "Entro al caso de la lista vacia\n";
+        cout << "\n";
+        cout << "collector empty.\n";
         void* ptr = malloc(size);
         return ptr;
     }
@@ -22,8 +22,9 @@ void* operator new(size_t size){//Overloading the new class
 }
 void operator delete(void* ptr){ //Overloading delete class
     collector.insert(ptr);
-    cout << "valor de ptr: " << ptr <<"\n";
     free(ptr);
+    
+    
 }
             
 class List{
@@ -37,42 +38,49 @@ class List{
         void insert(int data){
             Node* newNode = new Node(data); 
             newNode->next = head;
-            cout << newNode->getData() << " cheking the data of newNode \n";
+            head = newNode;
+            cout << "Inserted node: " << newNode->getData()<<"\n";
         }
         Node* removeAux(Node* node){
+            cout << "deleted node: " << node->getData()<<"\n";
             Node* temp = head;
-            void* nodePtr = &node;
-            delete nodePtr;
-            
+            delete node;
+
+            cout << "hola";
+            /*
             while(temp != NULL){
-                if(temp->next->getData() == node->getData()){
-                    if(temp == head){
-                        head = head->next;
-                    }else{
+                
+                
+                if(temp->getData() == node->getData()){
+                    temp = temp -> next;
+                }
+                else if(temp->next->getData() == node->getData()){
                         temp->next = temp->next->next;
                     }
+                else{
+                        temp = temp->next;
+                    }
                     return temp;
-                }else{
-                    temp = temp->next;
                 }
-            }
+                */
+                return 0;
         }
-        void remove(int value){
+        int remove(int value){
             Node* temp = head;
-
             while(temp != NULL){
                 if(temp->getData() == value){
                     removeAux(temp);
-                    break;
+                    return 0;
                 }else{
                     temp = temp->next;
                 }
             }
-            cout<< "Valor no enocontrado.\n";
+            cout<< "Value not found.\n";
+            return 0;
         }
         //print the list elements
         void printList(){
-            Node* temp = head;
+            Node* temp1 = head;
             //check if the list it's empty.
             if(head == NULL){
                 cout << "Empty list" << "\n";
@@ -80,9 +88,9 @@ class List{
             }
 
             //if the list isn't empty, print all the possible elements.
-            while(temp != NULL){
-                cout << temp->getData() << " -> ";
-                temp = temp->next;
+            while(temp1 != NULL){
+                cout << temp1->getData() << " -> ";
+                temp1 = temp1->next;
             }
         }
         //return the value of the pointer
