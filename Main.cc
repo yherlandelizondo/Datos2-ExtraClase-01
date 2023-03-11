@@ -5,28 +5,46 @@ using namespace std;
 
 int main(){
     List newList;
-    CollectorList collector;
 
     //cout << "State of if: " << collector.checkList() << "\n";
     
     newList.insert(5); 
     cout << "///////////////////////////////////\n";
     newList.printList();
-    collector.printList();
+    newList.getCollector().printList();
+    cout << "\n";
     cout << "///////////////////////////////////\n";
 
     newList.insert(8);
     cout << "///////////////////////////////////\n";
     newList.printList();
-    collector.printList();
+    newList.getCollector().printList();
+    cout << "\n";
     cout << "///////////////////////////////////\n";
+
     //hasta aqui el asunto esta bien.
     newList.remove(5);
     cout << "///////////////////////////////////\n";
-    collector.printList();
-    collector.printList();
+    newList.printList();
+    cout << "\n";
+    newList.getCollector().printList();
+    cout << "\n";
     cout << "///////////////////////////////////\n";
- 
+
+    newList.insert(9); 
+    cout << "///////////////////////////////////\n";
+    newList.printList();
+    newList.getCollector().printList();
+    cout << "\n";
+    cout << "///////////////////////////////////\n";
+
+    newList.remove(8);
+    cout << "///////////////////////////////////\n";
+    newList.printList();
+    cout << "\n";
+    newList.getCollector().printList();
+    cout << "\n";
+    cout << "///////////////////////////////////\n";
 
 
     return 0;

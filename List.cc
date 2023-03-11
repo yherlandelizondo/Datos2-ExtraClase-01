@@ -6,30 +6,24 @@ using namespace std;
 
 CollectorList collector;
 
-void* operator new(size_t size){//Overloading the new class
-    if(collector.checkList()){ //check if the collector it's empty (if collector size equal 0 the function checkList return True)
-        //create the node using malloc   
-        cout << "\n";
-        cout << "collector empty.\n";
-        void* ptr = malloc(size);
-        return ptr;
+void* operator new(size_t size){//Overloading operator new
+    if(collector.checkList()){ //check if the collector it's empty (if collector size equal 0 the function checkList return True) 
+        void* ptr = malloc(size);//create the node using malloc  
+        return ptr; //return the pointer
     }
     else{
-        //use existing space
-        void* ptr = collector.useSpace();
+        void* ptr = collector.useSpace(); //use existing space
         return ptr;
     }
 }
-void operator delete(void* ptr){ //Overloading delete class
+void operator delete(void* ptr){ //Overloading operator delete
     collector.insert(ptr);
-    free(ptr);
-    
-    
 }
             
 class List{
     Node* head;
     public:
+        //constructor method
         List(){
             head = NULL;
         }
@@ -39,18 +33,18 @@ class List{
             Node* newNode = new Node(data); 
             newNode->next = head;
             head = newNode;
-            cout << "Inserted node: " << newNode->getData()<<"\n";
+            cout << "\n";
+            cout << "INSERTED NODE: " << newNode->getData()<<"\n";
         }
+        //Auxiliar function to remove a node from the list and recycle his memory
         Node* removeAux(Node* node){
-            cout << "deleted node: " << node->getData()<<"\n";
+            cout << "\n";
+            cout << "DELETED NODE: " << node->getData()<<"\n";
             Node* temp = head;
             delete node;
-
-            cout << "hola";
-            /*
+            
+            //cycle used to remove the node from the main list
             while(temp != NULL){
-                
-                
                 if(temp->getData() == node->getData()){
                     temp = temp -> next;
                 }
@@ -62,9 +56,9 @@ class List{
                     }
                     return temp;
                 }
-                */
                 return 0;
         }
+        //funtion to check if the inserted value exist in the list, if true, call the auxiliar funtion
         int remove(int value){
             Node* temp = head;
             while(temp != NULL){
@@ -83,7 +77,7 @@ class List{
             Node* temp1 = head;
             //check if the list it's empty.
             if(head == NULL){
-                cout << "Empty list" << "\n";
+                cout << "Empty principal list" << "\n";
                 return;
             }
 
@@ -92,6 +86,11 @@ class List{
                 cout << temp1->getData() << " -> ";
                 temp1 = temp1->next;
             }
+            return;
+        }
+        //return the collector object
+        CollectorList getCollector(){
+            return collector;
         }
         //return the value of the pointer
         Node* getHead(){
