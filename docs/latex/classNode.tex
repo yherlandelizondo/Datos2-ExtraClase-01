@@ -1,0 +1,198 @@
+\hypertarget{classNode}{}\doxysection{Node Class Reference}
+\label{classNode}\index{Node@{Node}}
+
+
+\doxylink{classNode}{Node} class, used to create \doxylink{classNode}{Node} objects.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNode_ad7a34779cad45d997bfd6d3d8043c75f}{Node}} ()
+\begin{DoxyCompactList}\small\item\em constructor method \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNode_a0d68253f48f4deb1e078ef6cf08a5bf4}{Node}} (int data)
+\begin{DoxyCompactList}\small\item\em constructor method \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNode_ad9d9c6d9a949f1083bc26560a34a7342}{set\+Data}} (int value)
+\begin{DoxyCompactList}\small\item\em method used to set the data value \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNode_aca98907146d5d0687f48bf8be9df9b7d}{get\+Data}} ()
+\begin{DoxyCompactList}\small\item\em method used to get the data value \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNode_af1514d5547f590b018dc59a458515add}{set\+Next}} (\mbox{\hyperlink{classNode}{Node}} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em method used to set the next value \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ \mbox{\hyperlink{classNode_ae36639ff267d63e058ce309fde5a9913}{get\+Next}} ()
+\begin{DoxyCompactList}\small\item\em method used to get the next value \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classNode_a87c003c9f600e3fc58e6e90835f0b605}{data}}
+\item 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ \mbox{\hyperlink{classNode_a2559a716f69ccaa76d648d9f1b83065e}{next}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classNode}{Node} class, used to create \doxylink{classNode}{Node} objects. 
+
+Definition at line \mbox{\hyperlink{Node_8cc_source_l00005}{5}} of file \mbox{\hyperlink{Node_8cc_source}{Node.\+cc}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNode_ad7a34779cad45d997bfd6d3d8043c75f}\label{classNode_ad7a34779cad45d997bfd6d3d8043c75f}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor method 
+
+
+
+Definition at line \mbox{\hyperlink{Node_8cc_source_l00010}{10}} of file \mbox{\hyperlink{Node_8cc_source}{Node.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ data\ =\ 0;}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ next\ =\ NULL;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNode_a0d68253f48f4deb1e078ef6cf08a5bf4}\label{classNode_a0d68253f48f4deb1e078ef6cf08a5bf4}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{int}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor method 
+
+
+
+Definition at line \mbox{\hyperlink{Node_8cc_source_l00015}{15}} of file \mbox{\hyperlink{Node_8cc_source}{Node.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>data\ =\ data;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>next\ =\ NULL;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNode_aca98907146d5d0687f48bf8be9df9b7d}\label{classNode_aca98907146d5d0687f48bf8be9df9b7d}} 
+\index{Node@{Node}!getData@{getData}}
+\index{getData@{getData}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily int Node\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+method used to get the data value 
+
+
+
+Definition at line \mbox{\hyperlink{Node_8cc_source_l00024}{24}} of file \mbox{\hyperlink{Node_8cc_source}{Node.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ data;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNode_ae36639ff267d63e058ce309fde5a9913}\label{classNode_ae36639ff267d63e058ce309fde5a9913}} 
+\index{Node@{Node}!getNext@{getNext}}
+\index{getNext@{getNext}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getNext()}{getNext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNode}{Node}} $\ast$ Node\+::get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+method used to get the next value 
+
+
+
+Definition at line \mbox{\hyperlink{Node_8cc_source_l00032}{32}} of file \mbox{\hyperlink{Node_8cc_source}{Node.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ next;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNode_ad9d9c6d9a949f1083bc26560a34a7342}\label{classNode_ad9d9c6d9a949f1083bc26560a34a7342}} 
+\index{Node@{Node}!setData@{setData}}
+\index{setData@{setData}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily void Node\+::set\+Data (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+method used to set the data value 
+
+
+
+Definition at line \mbox{\hyperlink{Node_8cc_source_l00020}{20}} of file \mbox{\hyperlink{Node_8cc_source}{Node.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ data\ =\ value;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNode_af1514d5547f590b018dc59a458515add}\label{classNode_af1514d5547f590b018dc59a458515add}} 
+\index{Node@{Node}!setNext@{setNext}}
+\index{setNext@{setNext}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{setNext()}{setNext()}}
+{\footnotesize\ttfamily void Node\+::set\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}} $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+method used to set the next value 
+
+
+
+Definition at line \mbox{\hyperlink{Node_8cc_source_l00028}{28}} of file \mbox{\hyperlink{Node_8cc_source}{Node.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ next\ =\ ptr;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classNode_a87c003c9f600e3fc58e6e90835f0b605}\label{classNode_a87c003c9f600e3fc58e6e90835f0b605}} 
+\index{Node@{Node}!data@{data}}
+\index{data@{data}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily int Node\+::data}
+
+
+
+Definition at line \mbox{\hyperlink{Node_8cc_source_l00007}{7}} of file \mbox{\hyperlink{Node_8cc_source}{Node.\+cc}}.
+
+\mbox{\Hypertarget{classNode_a2559a716f69ccaa76d648d9f1b83065e}\label{classNode_a2559a716f69ccaa76d648d9f1b83065e}} 
+\index{Node@{Node}!next@{next}}
+\index{next@{next}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNode}{Node}}$\ast$ Node\+::next}
+
+
+
+Definition at line \mbox{\hyperlink{Node_8cc_source_l00008}{8}} of file \mbox{\hyperlink{Node_8cc_source}{Node.\+cc}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Node.\+cc\end{DoxyCompactItemize}

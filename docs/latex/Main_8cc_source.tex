@@ -1,0 +1,50 @@
+\hypertarget{Main_8cc_source}{}\doxysection{Main.\+cc}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00001}00001\ \textcolor{preprocessor}{\#include<iostream>}}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00002}00002\ \textcolor{preprocessor}{\#include<stdio.h>}}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}List.cc"{}}}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00004}00004\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00008}00008\ \textcolor{keywordtype}{int}\ main()\{}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00009}00009\ \ \ \ \ \mbox{\hyperlink{classList}{List}}\ newList;}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00010}00010\ \ \ \ \ \textcolor{keywordtype}{int}\ aux\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{while}\ (aux\ !=\ -\/1)\{}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00012}00012\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00013}00013\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/Press\ -\/1\ to\ close\ the\ program-\/-\/-\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00014}00014\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Insert\ -\/2\ to\ add\ or\ -\/3\ to\ delete:\ "{}};}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00015}00015\ \ \ \ \ \ \ \ \ cin\ >>\ aux;}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(aux\ ==\ -\/1)\{}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ <<\ \textcolor{stringliteral}{"{}Grabriela\ Q.S\ -\/\ Yherland\ E.C"{}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00019}00019\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(aux\ ==\ -\/2)\{}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Type\ the\ value\ to\ insert:\ "{}};}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ aux;}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ newList.\mbox{\hyperlink{classList_a8a2815bc53a4ab46ad9438da21c2d52a}{insert}}(aux);}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}///////////////////////////////////\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ newList.\mbox{\hyperlink{classList_a05f5db203ee286f62d915ef39d633b59}{printList}}();}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ newList.\mbox{\hyperlink{classList_a675d7f6f1fd2765b6166ec50d92cd003}{getCollector}}().\mbox{\hyperlink{classCollectorList_a35273df3ae7a6a69f0f3df6a48990acf}{printList}}();}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}///////////////////////////////////\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00029}00029\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(aux\ ==\ -\/3)\{}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Type\ the\ value\ to\ remove:\ "{}};}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ aux;}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ newList.\mbox{\hyperlink{classList_a4d81501e3cf8f18391eb5e94f7c1e74b}{remove}}(aux);}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}///////////////////////////////////\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ newList.\mbox{\hyperlink{classList_a05f5db203ee286f62d915ef39d633b59}{printList}}();}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ newList.\mbox{\hyperlink{classList_a675d7f6f1fd2765b6166ec50d92cd003}{getCollector}}().\mbox{\hyperlink{classCollectorList_a35273df3ae7a6a69f0f3df6a48990acf}{printList}}();}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}///////////////////////////////////\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00039}00039\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ value.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00043}00043\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{Main_8cc_source_l00046}00046\ }
+
+\end{DoxyCode}

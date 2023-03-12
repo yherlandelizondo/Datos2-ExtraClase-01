@@ -3,55 +3,50 @@
 #include "CollectorNode.cc"
 using namespace std;
 
+//! class of collector list
 class CollectorList{
     CollectorNode* head;
     int size;
-    
     public:
-        //constructor method
+        //! constructor method
         CollectorList(){
             head = NULL;
             size = 0;
-        };
-        
-        //insert a node at the beginnig of the list
+        }
+        //! method to insert a node at the beginnig of the list
         void insert(void* ptr){
-            CollectorNode* newCollectorNode = new CollectorNode(ptr);//initialize the new node
-            newCollectorNode->next = head;
+            CollectorNode* newCollectorNode = (CollectorNode*) malloc(sizeof(CollectorNode*)); 
+            newCollectorNode->setMemPtr(ptr);
+            newCollectorNode -> setNext(head);
             head = newCollectorNode;
             size++;
-        };  
-        //method used to use an available memory space
+        }   
+        //! method used to use an available memory space
         void* useSpace(){
             CollectorNode* space = head;
             head = head->next;
             size--;
             return space->getMemPtr();
         }
-        //print the list elements
+        //! method to print the list elements
         void printList(){
             CollectorNode* temp = head;
-
-            //check if the list it's empty.
             if(head == NULL){
-                cout << "\n";
-                cout << "Empty collector list";
+                cout << "\n" << "Empty collector list";
                 return;
             }
-
-            //if the list isn't empty, print all the possible elements.
+            cout << "\n";
             while(temp != NULL){
                 cout << temp-> getMemPtr() << " -> ";
                 temp = temp->next;
             }
             return;
         }
-        //method used to return the head of the list
+        //! method used to return the head of the list
         CollectorNode* getHead(){
             return head;
         }
-
-        //check if the list is empty, if not the function return a boolean value to continue with the process
+        //! method used to check if the list is empty, if not the function return a boolean value to continue with the process
         bool checkList(){
             if(size == 0){
                 return true;

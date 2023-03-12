@@ -1,0 +1,55 @@
+\hypertarget{CollectorList_8cc_source}{}\doxysection{Collector\+List.\+cc}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00001}00001\ \textcolor{preprocessor}{\#include<iostream>}}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00002}00002\ \textcolor{preprocessor}{\#include<stdio.h>}}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}CollectorNode.cc"{}}}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00004}00004\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00007}\mbox{\hyperlink{classCollectorList}{00007}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCollectorList}{CollectorList}}\{}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{classCollectorNode}{CollectorNode}}*\ head;}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00009}00009\ \ \ \ \ \textcolor{keywordtype}{int}\ size;}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00012}\mbox{\hyperlink{classCollectorList_a06675404de065c0d2f4366e5e0cd0485}{00012}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCollectorList_a06675404de065c0d2f4366e5e0cd0485}{CollectorList}}()\{}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ head\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ size\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00015}00015\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00017}\mbox{\hyperlink{classCollectorList_a97f93ec0a9b7eb440d04a83dbdd1141f}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCollectorList_a97f93ec0a9b7eb440d04a83dbdd1141f}{insert}}(\textcolor{keywordtype}{void}*\ ptr)\{}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCollectorNode}{CollectorNode}}*\ newCollectorNode\ =\ (\mbox{\hyperlink{classCollectorNode}{CollectorNode}}*)\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{classCollectorNode}{CollectorNode}}*));\ }
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ newCollectorNode-\/>\mbox{\hyperlink{classCollectorNode_a8897fb23de520cbb5151e5d0eedb2ec4}{setMemPtr}}(ptr);}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ newCollectorNode\ -\/>\ setNext(head);}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ head\ =\ newCollectorNode;}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ size++;}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00023}00023\ \ \ \ \ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00025}\mbox{\hyperlink{classCollectorList_ad6d4eb26edb3ff608c9fac2452879e45}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{classCollectorList_ad6d4eb26edb3ff608c9fac2452879e45}{useSpace}}()\{}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCollectorNode}{CollectorNode}}*\ space\ =\ head;}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ head\ =\ head-\/>next;}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ size-\/-\/;}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ space-\/>\mbox{\hyperlink{classCollectorNode_afbc9851343f2bfdd910d8d8893854f55}{getMemPtr}}();}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00032}\mbox{\hyperlink{classCollectorList_a35273df3ae7a6a69f0f3df6a48990acf}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCollectorList_a35273df3ae7a6a69f0f3df6a48990acf}{printList}}()\{}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCollectorNode}{CollectorNode}}*\ temp\ =\ head;}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(head\ ==\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ <<\ \textcolor{stringliteral}{"{}Empty\ collector\ list"{}};}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(temp\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ temp-\/>\ getMemPtr()\ <<\ \textcolor{stringliteral}{"{}\ -\/>\ "{}};}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp\ =\ temp-\/>next;}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00046}\mbox{\hyperlink{classCollectorList_a84db1bf12a7439be7b393ab413ddc19d}{00046}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCollectorNode}{CollectorNode}}*\ \mbox{\hyperlink{classCollectorList_a84db1bf12a7439be7b393ab413ddc19d}{getHead}}()\{}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ head;}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00050}\mbox{\hyperlink{classCollectorList_a204c8d2c0dc6e8dec422c6057c884855}{00050}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCollectorList_a204c8d2c0dc6e8dec422c6057c884855}{checkList}}()\{}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(size\ ==\ 0)\{}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00055}00055\ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00056}00056\ \};}
+\DoxyCodeLine{\Hypertarget{CollectorList_8cc_source_l00057}00057\ }
+
+\end{DoxyCode}

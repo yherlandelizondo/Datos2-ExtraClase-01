@@ -1,0 +1,198 @@
+\hypertarget{classCollectorNode}{}\doxysection{Collector\+Node Class Reference}
+\label{classCollectorNode}\index{CollectorNode@{CollectorNode}}
+
+
+\doxylink{classCollectorNode}{Collector\+Node} class, used to create Collector \doxylink{classNode}{Node} objects.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCollectorNode_a74f437a4ae4f2085c23dab03d11ffa56}{Collector\+Node}} ()
+\begin{DoxyCompactList}\small\item\em constructor method \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCollectorNode_afb16b0e0258b6f15e9146d4c36e2f9e0}{Collector\+Node}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em constructor method \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCollectorNode_a8897fb23de520cbb5151e5d0eedb2ec4}{set\+Mem\+Ptr}} (void $\ast$value)
+\begin{DoxyCompactList}\small\item\em method used to set the set\+Mem\+Ptr value \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{classCollectorNode_afbc9851343f2bfdd910d8d8893854f55}{get\+Mem\+Ptr}} ()
+\begin{DoxyCompactList}\small\item\em method used to get the set\+Mem\+Ptr value \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCollectorNode_a0b4fd177ed538d54351e09b7dc9b79c2}{set\+Next}} (\mbox{\hyperlink{classCollectorNode}{Collector\+Node}} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em method used to set the next value \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCollectorNode}{Collector\+Node}} $\ast$ \mbox{\hyperlink{classCollectorNode_a4c16ca51edd553dd4437fa83459f1342}{get\+Next}} ()
+\begin{DoxyCompactList}\small\item\em method used to get the next value \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{classCollectorNode_a57861687ac5b134ebc63c1d4cc86d1e2}{mem\+Ptr}}
+\item 
+\mbox{\hyperlink{classCollectorNode}{Collector\+Node}} $\ast$ \mbox{\hyperlink{classCollectorNode_a6870929f93353be4d7f09bf06167192c}{next}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classCollectorNode}{Collector\+Node} class, used to create Collector \doxylink{classNode}{Node} objects. 
+
+Definition at line \mbox{\hyperlink{CollectorNode_8cc_source_l00005}{5}} of file \mbox{\hyperlink{CollectorNode_8cc_source}{Collector\+Node.\+cc}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCollectorNode_a74f437a4ae4f2085c23dab03d11ffa56}\label{classCollectorNode_a74f437a4ae4f2085c23dab03d11ffa56}} 
+\index{CollectorNode@{CollectorNode}!CollectorNode@{CollectorNode}}
+\index{CollectorNode@{CollectorNode}!CollectorNode@{CollectorNode}}
+\doxysubsubsection{\texorpdfstring{CollectorNode()}{CollectorNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Collector\+Node\+::\+Collector\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor method 
+
+
+
+Definition at line \mbox{\hyperlink{CollectorNode_8cc_source_l00010}{10}} of file \mbox{\hyperlink{CollectorNode_8cc_source}{Collector\+Node.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ memPtr\ =\ 0;}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ next\ =\ NULL;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCollectorNode_afb16b0e0258b6f15e9146d4c36e2f9e0}\label{classCollectorNode_afb16b0e0258b6f15e9146d4c36e2f9e0}} 
+\index{CollectorNode@{CollectorNode}!CollectorNode@{CollectorNode}}
+\index{CollectorNode@{CollectorNode}!CollectorNode@{CollectorNode}}
+\doxysubsubsection{\texorpdfstring{CollectorNode()}{CollectorNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Collector\+Node\+::\+Collector\+Node (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor method 
+
+
+
+Definition at line \mbox{\hyperlink{CollectorNode_8cc_source_l00015}{15}} of file \mbox{\hyperlink{CollectorNode_8cc_source}{Collector\+Node.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>memPtr\ =\ ptr;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>next\ =\ NULL;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCollectorNode_afbc9851343f2bfdd910d8d8893854f55}\label{classCollectorNode_afbc9851343f2bfdd910d8d8893854f55}} 
+\index{CollectorNode@{CollectorNode}!getMemPtr@{getMemPtr}}
+\index{getMemPtr@{getMemPtr}!CollectorNode@{CollectorNode}}
+\doxysubsubsection{\texorpdfstring{getMemPtr()}{getMemPtr()}}
+{\footnotesize\ttfamily void $\ast$ Collector\+Node\+::get\+Mem\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+method used to get the set\+Mem\+Ptr value 
+
+
+
+Definition at line \mbox{\hyperlink{CollectorNode_8cc_source_l00024}{24}} of file \mbox{\hyperlink{CollectorNode_8cc_source}{Collector\+Node.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ memPtr;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCollectorNode_a4c16ca51edd553dd4437fa83459f1342}\label{classCollectorNode_a4c16ca51edd553dd4437fa83459f1342}} 
+\index{CollectorNode@{CollectorNode}!getNext@{getNext}}
+\index{getNext@{getNext}!CollectorNode@{CollectorNode}}
+\doxysubsubsection{\texorpdfstring{getNext()}{getNext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCollectorNode}{Collector\+Node}} $\ast$ Collector\+Node\+::get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+method used to get the next value 
+
+
+
+Definition at line \mbox{\hyperlink{CollectorNode_8cc_source_l00032}{32}} of file \mbox{\hyperlink{CollectorNode_8cc_source}{Collector\+Node.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ next;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCollectorNode_a8897fb23de520cbb5151e5d0eedb2ec4}\label{classCollectorNode_a8897fb23de520cbb5151e5d0eedb2ec4}} 
+\index{CollectorNode@{CollectorNode}!setMemPtr@{setMemPtr}}
+\index{setMemPtr@{setMemPtr}!CollectorNode@{CollectorNode}}
+\doxysubsubsection{\texorpdfstring{setMemPtr()}{setMemPtr()}}
+{\footnotesize\ttfamily void Collector\+Node\+::set\+Mem\+Ptr (\begin{DoxyParamCaption}\item[{void $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+method used to set the set\+Mem\+Ptr value 
+
+
+
+Definition at line \mbox{\hyperlink{CollectorNode_8cc_source_l00020}{20}} of file \mbox{\hyperlink{CollectorNode_8cc_source}{Collector\+Node.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ memPtr\ =\ value;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCollectorNode_a0b4fd177ed538d54351e09b7dc9b79c2}\label{classCollectorNode_a0b4fd177ed538d54351e09b7dc9b79c2}} 
+\index{CollectorNode@{CollectorNode}!setNext@{setNext}}
+\index{setNext@{setNext}!CollectorNode@{CollectorNode}}
+\doxysubsubsection{\texorpdfstring{setNext()}{setNext()}}
+{\footnotesize\ttfamily void Collector\+Node\+::set\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCollectorNode}{Collector\+Node}} $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+method used to set the next value 
+
+
+
+Definition at line \mbox{\hyperlink{CollectorNode_8cc_source_l00028}{28}} of file \mbox{\hyperlink{CollectorNode_8cc_source}{Collector\+Node.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ next\ =\ ptr;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCollectorNode_a57861687ac5b134ebc63c1d4cc86d1e2}\label{classCollectorNode_a57861687ac5b134ebc63c1d4cc86d1e2}} 
+\index{CollectorNode@{CollectorNode}!memPtr@{memPtr}}
+\index{memPtr@{memPtr}!CollectorNode@{CollectorNode}}
+\doxysubsubsection{\texorpdfstring{memPtr}{memPtr}}
+{\footnotesize\ttfamily void$\ast$ Collector\+Node\+::mem\+Ptr}
+
+
+
+Definition at line \mbox{\hyperlink{CollectorNode_8cc_source_l00007}{7}} of file \mbox{\hyperlink{CollectorNode_8cc_source}{Collector\+Node.\+cc}}.
+
+\mbox{\Hypertarget{classCollectorNode_a6870929f93353be4d7f09bf06167192c}\label{classCollectorNode_a6870929f93353be4d7f09bf06167192c}} 
+\index{CollectorNode@{CollectorNode}!next@{next}}
+\index{next@{next}!CollectorNode@{CollectorNode}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCollectorNode}{Collector\+Node}}$\ast$ Collector\+Node\+::next}
+
+
+
+Definition at line \mbox{\hyperlink{CollectorNode_8cc_source_l00008}{8}} of file \mbox{\hyperlink{CollectorNode_8cc_source}{Collector\+Node.\+cc}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Collector\+Node.\+cc\end{DoxyCompactItemize}
